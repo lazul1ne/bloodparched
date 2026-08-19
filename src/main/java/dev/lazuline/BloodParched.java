@@ -1,5 +1,6 @@
 package dev.lazuline;
 
+import dev.lazuline.effect.ModEffects;
 import dev.lazuline.enchantment.ModEnchantments;
 import dev.lazuline.item.ModItemGroups;
 import dev.lazuline.item.ModItems;
@@ -22,6 +23,7 @@ public class BloodParched implements ModInitializer {
 		ModItemGroups.registerModItemGroups();
 		ModItems.registerModItems();
 		ModEnchantments.registerModEnchantments();
+		ModEffects.registerModEffects();
 	}
 
 	public static Identifier id(String path) {
