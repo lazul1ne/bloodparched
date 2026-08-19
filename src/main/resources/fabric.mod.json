@@ -2,35 +2,28 @@
 	"schemaVersion": 1,
 	"id": "bloodparched",
 	"version": "${version}",
-	"name": "Blood Parched",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Bloodparched",
+	"description": "Todo: Add description later.",
 	"authors": [
-		"Me!"
+		"lazul1ne"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/lazul1ne/bloodparched"
 	},
-	"license": "CC0-1.0",
+	"license": "All Rights Reserved",
 	"icon": "assets/bloodparched/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"dev.lazuline.BloodParched"
-		],
-		"client": [
-			"dev.lazuline.client.BloodParchedClient"
+			"dev.lazuline.Bloodparched"
 		],
 		"fabric-datagen": [
-			"dev.lazuline.client.BloodParchedDataGenerator"
+			"dev.lazuline.BloodparchedDataGenerator"
 		]
 	},
 	"mixins": [
-		"bloodparched.mixins.json",
-		{
-			"config": "bloodparched.client.mixins.json",
-			"environment": "client"
-		}
+		"bloodparched.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.19.3",

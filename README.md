@@ -1,4 +1,4 @@
-# Blood Parched
+# Bloodparched
 
 ## Setup
 

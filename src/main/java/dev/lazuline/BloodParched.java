@@ -7,7 +7,7 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class BloodParched implements ModInitializer {
+public class Bloodparched implements ModInitializer {
 	public static final String MOD_ID = "bloodparched";
 
 	// This logger is used to write text to the console and the log file.
