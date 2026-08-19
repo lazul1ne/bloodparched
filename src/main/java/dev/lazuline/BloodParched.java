@@ -1,5 +1,6 @@
 package dev.lazuline;
 
+import dev.lazuline.enchantment.ModEnchantments;
 import dev.lazuline.item.ModItemGroups;
 import dev.lazuline.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -20,6 +21,7 @@ public class BloodParched implements ModInitializer {
 		LOGGER.info("Hello Fabric world!!!");
 		ModItemGroups.registerModItemGroups();
 		ModItems.registerModItems();
+		ModEnchantments.registerModEnchantments();
 	}
 
 	public static Identifier id(String path) {
