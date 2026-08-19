@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "bloodparched",
 	"version": "${version}",
-	"name": "Bloodparched",
+	"name": "Blood Parched",
 	"description": "Todo: Add description later.",
 	"authors": [
 		"lazul1ne"
@@ -16,7 +16,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"dev.lazuline.Bloodparched"
+			"dev.lazuline.BloodParched"
 		],
 		"fabric-datagen": [
 			"dev.lazuline.BloodparchedDataGenerator"
