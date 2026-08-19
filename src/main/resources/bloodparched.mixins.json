@@ -3,7 +3,7 @@
 	"package": "dev.lazuline.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+      "LivingEntityDeathMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

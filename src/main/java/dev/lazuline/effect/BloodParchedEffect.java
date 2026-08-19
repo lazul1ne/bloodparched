@@ -3,26 +3,29 @@ package dev.lazuline.effect;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 
 public class BloodParchedEffect extends StatusEffect {
-    protected BloodParchedEffect() {
-        // category: StatusEffectCategory - describes if the effect is helpful (BENEFICIAL), harmful (HARMFUL) or useless (NEUTRAL)
-        // color: int - Color is the color assigned to the effect (in RGB)
+    public BloodParchedEffect() {
+
         super(StatusEffectCategory.HARMFUL, 0x780606);
     }
     // This method is called every tick to check whether it should apply the status effect or not
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
-        // In our case, we just make it return true so that it applies the status effect every tick.
+        //this makes it apply the status effect every tick.
         return true;
     }
 
-    // This method is called when it applies the status effect. We implement custom functionality here.
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity) {
-            ((PlayerEntity) entity).addExperience(1 << amplifier); // Higher amplifier gives you EXP faster
+
+            ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 2, 0, false, false));
+            ((PlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 2, 0, false, false));
+
         }
     }
 }
