@@ -1,3 +1,5 @@
 {
-  "item.bloodparched.coagulated_blood": "Coagulated Blood"
+  "item.bloodparched.coagulated_blood": "Coagulated Blood",
+
+  "itemgroup.parched": "Blood Parched"
 }
