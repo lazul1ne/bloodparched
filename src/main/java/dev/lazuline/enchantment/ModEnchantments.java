@@ -13,7 +13,7 @@ public class ModEnchantments {
     public static void registerModEnchantments(){
         BloodParched.LOGGER.info("Registering " + BloodParched.MOD_ID +"'s enchantments.");
 
-        Registry.register(Registries.ENCHANTMENT, new Identifier("bloodparched", "leech"),
+        Registry.register(Registries.ENCHANTMENT, new Identifier(BloodParched.MOD_ID, "leech"),
                 new LeechEnchantment());
     }
 }

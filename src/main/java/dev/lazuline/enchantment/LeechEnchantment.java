@@ -6,13 +6,7 @@ import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.registry.Registries;
-import net.minecraft.util.Identifier;
-import net.minecraft.registry.Registry;
 
-import java.util.Random;
 
 
 public class LeechEnchantment extends Enchantment { ;
@@ -35,14 +29,8 @@ public class LeechEnchantment extends Enchantment { ;
             double randDouble = Math.random();
             //BloodParched.LOGGER.info("Random number was: " + randDouble);
 
-            if(level == 1 && randDouble <= 0.33D){
-                user.heal(baseHealing * (level));
-
-            }else if(level == 2 && randDouble <= 0.66D){
-                user.heal(baseHealing * (level));
-
-            }else if (level == 3 && randDouble <= 0.90D){
-                user.heal(baseHealing * (level/2));
+            if (Math.random() < level * 0.3) {
+                user.heal(baseHealing * level);
             }
         super.onTargetDamaged(user, target, level);
     }
